@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "SÖHNE";
+  src: url("/dist/TestSöhne-Buch.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SÖHNEMONO";
+  src: url("/dist/TestSöhneMono-Halbfett.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+.nav-menu-enter {
+  animation: slideIn 0.3s forwards;
+}
+
+.nav-menu-exit {
+  animation: slideOut 0.3s forwards;
+}
+
+.highlight {
+  position: relative;
+  justify-content: center;
+  display: flex;
+  color: white;
+  background-color: black;
+  padding-top:10px;
+  padding-bottom:10px;
+  padding-left:24px;
+  padding-right:24px;
+  border-radius: 9999px;
+}
+
+.navbar {
+  transition: top 0.7s;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Shown state */
+.visible {
+  display: block;
+}
+
+
+.main_menu {
+  
+}
+
+
+.fixcode {
+
+}
+
+.theory {
+  
+}
+
+.theory:hover {
+  
+}
+.homeS {
+
+}
+
+.neighbor {
+
+}

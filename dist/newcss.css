@@ -1,0 +1,98 @@
+.hidden {
+  display: none;
+}
+
+/* Shown state */
+.visible {
+  display: block;
+}
+
+
+
+#myFirst {
+  transition: transform 0.3s ease; /* Smooth transition for the mirroring */
+  transform-origin: center; 
+}
+
+#navbar {
+  z-index: 20;
+}
+
+#myFirst:hover {
+  transform: rotate(80deg) scale(0.9) ; 
+  transition-timing-function: ease-in-out;/* Flip horizontally on hover */
+  
+}
+
+#searchContainer {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s;
+  z-index: 10;
+}
+#searchContainer.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+#targetDiv {
+  display: none;
+  position: absolute; /* Absolute until the scroll threshold is reached */
+  top: 0;
+  left: 0;
+  background-color: white; /* Optional: Background color to make it visible */
+  padding: 10px; /* Optional: Add some padding */
+  z-index: 1000;
+  opacity: 0; /* Start with full transparency */
+  visibility: hidden; /* Hidden initially */
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+#targetDiv.visible {
+  opacity: 1; /* Fully visible */
+  visibility: visible; /* Make visible */
+  position: fixed; /* Stick to the top-left corner */
+}
+
+.input-containerr {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.input1 {
+  width: 600px;
+  padding-top: 7px;
+  padding-bottom: 10px;
+  padding-right: 5px;
+  padding-left: 10px;x
+  font-size: 1.2em;
+  border: 2px solid #ccc;
+  border-radius: 50vh;
+}
+
+/* Style for placeholder */
+.input1::placeholder {
+  color: #999;
+  opacity: 1;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.input1.placeholder-up::placeholder {
+  opacity: 0;
+  transform: translateY(-100%); 
+}
+
+.input1.placeholder-down::placeholder {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.input1.placeholder-visible::placeholder {
+  opacity: 1;
+  transform: translateY(0);
+}
