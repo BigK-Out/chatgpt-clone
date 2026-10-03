@@ -1,7 +1,3 @@
-.hidden {
-  display: none;
-}
-
 /* Shown state */
 .visible {
   display: block;
@@ -39,25 +35,6 @@
   overflow: hidden;
 }
 
-#targetDiv {
-  display: none;
-  position: absolute; /* Absolute until the scroll threshold is reached */
-  top: 0;
-  left: 0;
-  background-color: white; /* Optional: Background color to make it visible */
-  padding: 10px; /* Optional: Add some padding */
-  z-index: 1000;
-  opacity: 0; /* Start with full transparency */
-  visibility: hidden; /* Hidden initially */
-  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
-}
-
-#targetDiv.visible {
-  opacity: 1; /* Fully visible */
-  visibility: visible; /* Make visible */
-  position: fixed; /* Stick to the top-left corner */
-}
-
 .input-containerr {
   display: flex;
   justify-content: center;
@@ -66,10 +43,11 @@
 
 .input1 {
   width: 600px;
+  max-width: 90vw;
   padding-top: 7px;
   padding-bottom: 10px;
   padding-right: 5px;
-  padding-left: 10px;x
+  padding-left: 10px;
   font-size: 1.2em;
   border: 2px solid #ccc;
   border-radius: 50vh;
@@ -96,3 +74,172 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+/* extras */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+[data-reveal].in {
+  opacity: 1;
+  transform: none;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #e3e3e3;
+  border-radius: 20px;
+  padding: 24px;
+  transition: opacity 0.7s ease, transform 0.4s ease, box-shadow 0.3s ease, border-color 0.3s;
+}
+.card:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+  border-color: #000;
+}
+.card i { font-size: 1.4rem; margin-bottom: 14px; display: block; }
+.card h3 { font-size: 1.15rem; margin-bottom: 6px; }
+.card p { color: #777978; }
+
+.dot {
+  position: absolute;
+  left: -9px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #000;
+  border: 3px solid #f9f9f9;
+}
+
+#faq summary {
+  cursor: pointer;
+  font-size: 1.15rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+#faq summary::-webkit-details-marker { display: none; }
+#faq summary::after { content: "+"; transition: transform 0.3s; }
+#faq details[open] summary::after { transform: rotate(45deg); }
+
+.tok {
+  padding: 2px 6px;
+  border-radius: 6px;
+  white-space: pre;
+  animation: pop 0.25s ease;
+}
+@keyframes pop { from { transform: scale(0.6); opacity: 0; } }
+
+.fab {
+  position: fixed;
+  right: 20px;
+  z-index: 30;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s, opacity 0.3s;
+}
+.fab:hover { transform: scale(1.1); }
+#toTop { bottom: 20px; opacity: 0; pointer-events: none; }
+#toTop.show { opacity: 1; pointer-events: auto; }
+#darkToggle { bottom: 76px; }
+
+/* dark mode: invert the page, keep pictures natural */
+html.dark { filter: invert(1) hue-rotate(180deg); background: #fff; }
+html.dark img, html.dark .fab { filter: invert(1) hue-rotate(180deg); }
+
+.confetti {
+  position: fixed;
+  top: -10px;
+  width: 10px;
+  height: 14px;
+  z-index: 100;
+  pointer-events: none;
+}
+
+/* round 2 */
+.chip {
+  border: 1px solid #ccc;
+  border-radius: 9999px;
+  padding: 4px 14px;
+  transition: background 0.3s, color 0.3s;
+}
+.chip:hover { background: #000; color: #fff; border-color: #000; }
+
+.actions { display: flex; gap: 6px; }
+.actions button { padding: 4px 8px; border-radius: 8px; color: #777978; transition: background 0.2s; }
+.actions button:hover { background: rgba(0, 0, 0, 0.08); }
+.actions button.on { color: #000; background: rgba(0, 0, 0, 0.12); }
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 30px;
+  transform: translate(-50%, 20px);
+  background: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 9999px;
+  opacity: 0;
+  z-index: 200;
+  transition: opacity 0.3s, transform 0.3s;
+}
+.toast.show { opacity: 1; transform: translate(-50%, 0); }
+
+.plan {
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 9999px;
+  border: 1px solid #000;
+  padding: 8px;
+  transition: background 0.3s, color 0.3s;
+}
+.plan:hover { background: #000; color: #fff; }
+
+.marquee { mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); }
+.track { display: flex; gap: 16px; width: max-content; animation: scroll 40s linear infinite; }
+.marquee:hover .track { animation-play-state: paused; }
+.track blockquote {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #e3e3e3;
+  border-radius: 16px;
+  background: #fff;
+}
+.track cite { display: block; margin-top: 8px; font-style: normal; color: #777978; font-size: 0.9rem; }
+@keyframes scroll { to { transform: translateX(-50%); } }
+
+.card { position: relative; overflow: hidden; }
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(240px circle at var(--x, 50%) var(--y, 50%), rgba(16, 163, 127, 0.14), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+.card:hover::before { opacity: 1; }
+
+#palette {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: none;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 18vh;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(4px);
+}
+#palette.open { display: flex; }
+#palette .box { width: min(560px, 92vw); background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3); }
+#palette input { width: 100%; padding: 18px 20px; font-size: 1.1rem; outline: none; border-bottom: 1px solid #eee; }
+#palette li { padding: 12px 20px; cursor: pointer; display: flex; justify-content: space-between; }
+#palette li.sel { background: #000; color: #fff; }
+#palette li small { opacity: 0.6; }

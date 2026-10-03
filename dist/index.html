@@ -10,19 +10,17 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body class="bg-[#f9f9f9]">
-	<div id="targetDiv"class="">
-    new div
-  </div>
 <div  class="justify-center flex">
-	<div id="navbar" class="fixed navbar backdrop-blur-xl mx-auto max-w-screen-lg flex justify-between py-4 w-screen pl-12">
+	<div id="navbar" class="fixed top-0 inset-x-0 navbar backdrop-blur-xl py-4">
+	<div class="mx-auto max-w-screen-lg flex justify-between pl-4 pr-4 md:pl-12">
 		<div class="cursor-pointer h-6 w-6">
 			<img src="openailogo.png" alt="openai img">
 		</div>
-		<div class="flex gap-10 font-söhne text-sm font-normal text-[#080808]">
-			<a class="cursor-pointer" >Research</a>
-			<a class="cursor-pointer">Products</a>
-			<a class="cursor-pointer">Safety</a>
-			<a class="cursor-pointer">Company</a>
+		<div class="hidden md:flex gap-10 font-söhne text-sm font-normal text-[#080808]">
+			<a class="cursor-pointer" href="https://openai.com/research">Research</a>
+			<a class="cursor-pointer" href="https://openai.com/chatgpt">Products</a>
+			<a class="cursor-pointer" href="https://openai.com/safety">Safety</a>
+			<a class="cursor-pointer" href="https://openai.com/about">Company</a>
 		</div>
 		<div class="size-3">
 			<button id="openSearch">
@@ -31,9 +29,10 @@
 				</svg>	
 			</button>
 		</div>
+	</div>
 </div>
 	<div id="searchContainer" class="fixed inset-0 flex items-center justify-center bg-[#efeeee] bg-opacity-100 backdrop-blur-2xl">
-		<input type="text" id="searchInput" class=" w-3/4 p-8 text-6xl font-söhne focus:outline-none rounded bg-[#efeeee] bg-opacity-50 border-none placeholder-gray-500 mt-36 ml-48" placeholder="Press 'Return' to search">
+		<input type="text" id="searchInput" class=" w-3/4 p-8 text-3xl md:text-6xl font-söhne focus:outline-none rounded bg-[#efeeee] bg-opacity-50 border-none placeholder-gray-500 mt-36 md:ml-48" placeholder="Press 'Return' to search">
 	</div>
 		</div>
 <div class="">
@@ -42,30 +41,30 @@
 			<div class="flex justify-center">
 				<div class="">
 					<h1 class="justify-center flex font-söhne pb-5 pt-28">November 30, 2022</h1>
-					<header class="flex justify-center font-söhne font-medium text-7xl box-content">Introducing ZortGPT</header>
-					<div class="flex gap-10 justify-center">
-						<a href="" class="transition font-söhne bg-black hover:bg-gray-500 hover:duration-500 text-white py-2 mt-10 text-center flex px-4 rounded-full">
+					<header class="flex justify-center font-söhne font-medium text-4xl md:text-7xl box-content text-center px-4">Introducing ZortGPT</header>
+					<div class="flex flex-wrap gap-x-10 justify-center">
+						<a href="https://chatgpt.com" class="transition font-söhne bg-black hover:bg-gray-500 hover:duration-500 text-white py-2 mt-10 text-center flex px-4 rounded-full">
 							Try ChatGPT
 						</a>
 						<div href="" class=" cursor-pointer flex gap-1  ">
-							<a class="hover:underline_second hover: ease-in-out hover:duration-1000 hover:transition-all mt-12 font-söhne">Download ChatGPT desktop</a>
+							<a href="https://openai.com/chatgpt/desktop" class="hover:underline_second hover: ease-in-out hover:duration-1000 hover:transition-all mt-12 font-söhne">Download ChatGPT desktop</a>
 							<i class="fa-solid fa-chevron-right mt-a fa-2xs"></i>
 						</div>
 						<div href="" class="cursor-pointer flex gap-1">
-							<a class="hover:underline_second hover: ease-in-out hover:duration-500 mt-12 transition font-söhne">Learn about ChatGPT</a>
+							<a href="#menu" class="hover:underline_second hover: ease-in-out hover:duration-500 mt-12 transition font-söhne">Learn about ChatGPT</a>
 							<i class="fa-solid fa-chevron-right mt-a fa-2xs"></i>
 						</div>
 					
 					</div>
-					<div class="justify-center mx-auto max-w-screen-lg px-36 pt-20">
+					<div class="justify-center mx-auto max-w-screen-lg px-6 md:px-36 pt-20">
 						<p class="justify-center flex mx-auto max-w-screen-lg py-4 font-söhne text-lg"><span>We’ve trained a model called ChatGPT which interacts in a conversational way. The dialogue format makes it possible for ChatGPT to answer followup questions, admit its mistakes, challenge incorrect premises, and reject inappropriate requests.</span></p>
-						<p class="justify-center flex mx-auto max-w-screen-lg py-4 font-söhne text-lg"><span>ChatGPT is a sibling model to <span href="" class="cursor-pointer underline hover:underline_third hover:duration-500">InstructGPT</span>, which is trained to follow an instruction in a prompt and provide a detailed response.</span></p>
-						<p class="justify-center flex mx-auto max-w-screen-lg py-4 font-söhne text-lg "><span>We are excited to introduce ChatGPT to get users’ feedback and learn about its strengths and weaknesses. During the research preview, usage of ChatGPT is free. Try it now at <span class="hover:underline_third hover:duration-500 cursor-pointer underline"> chatgpt.com</span>.</span></p>
+						<p class="justify-center flex mx-auto max-w-screen-lg py-4 font-söhne text-lg"><span>ChatGPT is a sibling model to <a href="https://openai.com/research/instruction-following" class="cursor-pointer underline hover:underline_third hover:duration-500">InstructGPT</a>, which is trained to follow an instruction in a prompt and provide a detailed response.</span></p>
+						<p class="justify-center flex mx-auto max-w-screen-lg py-4 font-söhne text-lg "><span>We are excited to introduce ChatGPT to get users’ feedback and learn about its strengths and weaknesses. During the research preview, usage of ChatGPT is free. Try it now at <a href="https://chatgpt.com" class="hover:underline_third hover:duration-500 cursor-pointer underline"> chatgpt.com</a>.</span></p>
 					</div>
-					<div class="justify-start flex mx-auto max-w-screen-lg px-36 text-3xl pt-12 pb-12 font-normal">
+					<div class="justify-start flex mx-auto max-w-screen-lg px-6 md:px-36 text-3xl pt-12 pb-12 font-normal">
 						Samples
 					</div>
-						<div id="menu" class="main_menu font-söhne flex justify-center gap-2">
+						<div id="menu" class="main_menu font-söhne flex flex-wrap justify-center gap-2 px-4">
 							<button id= "fcode"class= "rounded-full px-6 hover:bg-opacity-100 hover:duration-500 bg-[#e3e3e3] cursor-pointer bg-opacity-0 transition-colors theory highlight" data-content="fc">Fix Code</button>
 							<button id= "homes" class="rounded-full px-6 hover:bg-opacity-100 hover:duration-500 bg-[#e3e3e3] cursor-pointer transition-colors bg-opacity-0 theory" data-content="hs">Home Security</button>
 							<button id= "fermat" class= "rounded-full px-6 bg-[#e3e3e3] hover:bg-opacity-100 hover:duration-500 cursor-pointer transition-colors bg-opacity-0 theory" data-content="flt">Fermat's Little Theorem</button>
@@ -80,15 +79,135 @@
 	</div>
 </div>
 
+<div id="progress" class="fixed top-0 left-0 h-[3px] bg-black z-[30]" style="width:0"></div>
+
+<!-- stats -->
+<section class="max-w-screen-lg mx-auto px-6 pt-28 font-söhne">
+	<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center border-y border-[#dcdcdc] py-12">
+		<div data-reveal><div class="text-5xl md:text-6xl"><span data-count="1000000">0</span>+</div><p class="text-[#777978] mt-2">users in 5 days</p></div>
+		<div data-reveal><div class="text-5xl md:text-6xl"><span data-count="42">0</span></div><p class="text-[#777978] mt-2">answers about 42</p></div>
+		<div data-reveal><div class="text-5xl md:text-6xl"><span data-count="9001">0</span></div><p class="text-[#777978] mt-2">limericks written</p></div>
+		<div data-reveal><div class="text-5xl md:text-6xl"><span data-count="0">0</span></div><p class="text-[#777978] mt-2">letters actually sent</p></div>
+	</div>
+</section>
+
+<!-- capabilities -->
+<section class="max-w-screen-lg mx-auto px-6 pt-28 font-söhne">
+	<h2 class="text-3xl pb-10" data-reveal>What ZortGPT can do</h2>
+	<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+		<div class="card" data-reveal><i class="fa-solid fa-comments"></i><h3>Talk it through</h3><p>Follow-up questions, corrections, and tangents. It remembers what you said two messages ago.</p></div>
+		<div class="card" data-reveal><i class="fa-solid fa-code"></i><h3>Debug your code</h3><p>Paste a stubborn goroutine and get a second pair of eyes that never sighs.</p></div>
+		<div class="card" data-reveal><i class="fa-solid fa-pen-nib"></i><h3>Write with you</h3><p>Notes to neighbors, poems, cover letters. Then make it more formal.</p></div>
+		<div class="card" data-reveal><i class="fa-solid fa-square-root-variable"></i><h3>Explain the maths</h3><p>Fermat's little theorem, without the panic.</p></div>
+		<div class="card" data-reveal><i class="fa-solid fa-language"></i><h3>Cross languages</h3><p>Translate the menu, the email, and the awkward text message.</p></div>
+		<div class="card" data-reveal><i class="fa-solid fa-lightbulb"></i><h3>Spark ideas</h3><p>Dinner, dungeons, database schemas. Ask for ten and pick two.</p></div>
+	</div>
+</section>
+
+<!-- tokenizer toy -->
+<section class="max-w-screen-lg mx-auto px-6 pt-28 font-söhne">
+	<h2 class="text-3xl pb-3" data-reveal>Chop it into tokens</h2>
+	<p class="text-[#777978] pb-8" data-reveal>Models read pieces of words, not words. Type anything and watch it get sliced. (A rough toy, not the real tokenizer.)</p>
+	<textarea id="tokIn" rows="3" class="w-full rounded-2xl border-2 border-[#ccc] bg-transparent p-4 text-lg focus:outline-none focus:border-black" placeholder="Fermat's little theorem is unbelievably useful">Fermat's little theorem is unbelievably useful</textarea>
+	<div id="tokOut" class="flex flex-wrap gap-1 mt-6 text-lg font-söhneMono"></div>
+	<p id="tokStats" class="text-[#777978] mt-4"></p>
+</section>
+
+<!-- timeline -->
+<section class="max-w-screen-lg mx-auto px-6 pt-28 font-söhne">
+	<h2 class="text-3xl pb-10" data-reveal>How we got here</h2>
+	<ol class="relative border-l-2 border-[#dcdcdc] ml-3 space-y-10">
+		<li class="pl-8" data-reveal><span class="dot"></span><p class="text-[#777978]">Before</p><h3 class="text-xl">InstructGPT learns to follow instructions</h3></li>
+		<li class="pl-8" data-reveal><span class="dot"></span><p class="text-[#777978]">Training</p><h3 class="text-xl">Human trainers write both sides of the chat</h3></li>
+		<li class="pl-8" data-reveal><span class="dot"></span><p class="text-[#777978]">November 30, 2022</p><h3 class="text-xl">Research preview opens, free to try</h3></li>
+		<li class="pl-8" data-reveal><span class="dot"></span><p class="text-[#777978]">Next</p><h3 class="text-xl">Your feedback makes it better</h3></li>
+	</ol>
+</section>
+
+<!-- limitations -->
+<section class="max-w-screen-lg mx-auto px-6 pt-28 font-söhne">
+	<h2 class="text-3xl pb-10" data-reveal>Known limitations</h2>
+	<div id="faq" class="divide-y divide-[#dcdcdc] border-y border-[#dcdcdc]">
+		<details class="py-5" data-reveal><summary>Sometimes it's confidently wrong</summary><p class="pt-3 text-[#555]">ChatGPT can write plausible-sounding but incorrect or nonsensical answers. Check anything that matters.</p></details>
+		<details class="py-5" data-reveal><summary>Phrasing matters</summary><p class="pt-3 text-[#555]">It can be sensitive to tweaks in the input. A question it can't answer may work if you rephrase it.</p></details>
+		<details class="py-5" data-reveal><summary>It can ramble</summary><p class="pt-3 text-[#555]">Answers are often long-winded and repeat certain phrases.</p></details>
+		<details class="py-5" data-reveal><summary>It guesses instead of asking</summary><p class="pt-3 text-[#555]">When your question is ambiguous, an ideal model would ask what you meant. Ours usually guesses.</p></details>
+		<details class="py-5" data-reveal><summary>Can it send my letter?</summary><p class="pt-3 text-[#555]">No. It's a text-based assistant. It can draft the note, but the stamp is on you.</p></details>
+	</div>
+</section>
+
+
+<!-- pricing -->
+<section class="max-w-screen-lg mx-auto px-6 pt-28 font-söhne">
+	<div class="flex flex-wrap items-end justify-between gap-4 pb-10">
+		<h2 class="text-3xl" data-reveal>Pricing</h2>
+		<div id="billing" class="inline-flex rounded-full bg-[#e3e3e3] p-1 text-sm">
+			<button class="px-4 py-1 rounded-full bg-black text-white" data-bill="m">Monthly</button>
+			<button class="px-4 py-1 rounded-full" data-bill="y">Yearly &middot; save 20%</button>
+		</div>
+	</div>
+	<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+		<div class="card" data-reveal><h3>Free</h3><p class="text-4xl text-black py-4">$0</p><p>Research preview. Talk all you want, wait in line when it's busy.</p><button class="plan">Try it</button></div>
+		<div class="card" data-reveal style="border-color:#000"><h3>Plus</h3><p class="text-4xl text-black py-4">$<span data-m="20" data-y="16">20</span><span class="text-base text-[#777978]">/mo</span></p><p>Faster replies, priority access, first look at new features.</p><button class="plan">Go Plus</button></div>
+		<div class="card" data-reveal><h3>Team</h3><p class="text-4xl text-black py-4">$<span data-m="30" data-y="24">30</span><span class="text-base text-[#777978]">/seat/mo</span></p><p>Shared workspace, admin controls, and nobody pastes secrets into a personal chat.</p><button class="plan">Talk to us</button></div>
+	</div>
+</section>
+
+<!-- testimonials -->
+<section class="pt-28 font-söhne overflow-hidden">
+	<h2 class="text-3xl pb-10 max-w-screen-lg mx-auto px-6" data-reveal>People are saying</h2>
+	<div class="marquee"><div class="track">
+		<blockquote>"It explained Fermat better than my textbook." <cite>&mdash; a student</cite></blockquote>
+		<blockquote>"Found my channel bug in one message." <cite>&mdash; a Go developer</cite></blockquote>
+		<blockquote>"The neighbor note was perfect. I still haven't sent it." <cite>&mdash; a procrastinator</cite></blockquote>
+		<blockquote>"Wrote a limerick about prime numbers. I'm scared." <cite>&mdash; a mathematician</cite></blockquote>
+		<blockquote>"Refused to help me break in. Respect." <cite>&mdash; a locksmith</cite></blockquote>
+	</div></div>
+</section>
+
+<!-- newsletter -->
+<section class="max-w-screen-lg mx-auto px-6 pt-28 font-söhne text-center">
+	<h2 class="text-3xl pb-3" data-reveal>Get updates from ZortGPT</h2>
+	<p class="text-[#777978] pb-6" data-reveal>New samples, new limitations, no spam.</p>
+	<form id="news" class="flex flex-wrap justify-center gap-2" novalidate>
+		<input id="newsEmail" type="email" placeholder="you@example.com" class="w-72 max-w-full rounded-full border-2 border-[#ccc] bg-transparent px-5 py-2 focus:outline-none focus:border-black">
+		<button class="rounded-full bg-black text-white px-6 py-2 hover:bg-gray-500 transition">Subscribe</button>
+	</form>
+	<p id="newsMsg" class="text-sm text-[#777978] pt-3 h-5"></p>
+</section>
+
 <div class="bg-[#f9f9f9] text-black text-center py-10">
-	<p class="text-6xl font-söhne">Ask ChatGPT anything</p>
+	<p class="text-4xl md:text-6xl font-söhne">Ask ChatGPT anything</p>
 	<div class="input-containerr">
 		<input class="input1"type="text" id="animatedPlaceholderInput" placeholder="Design a database schema">
 	</div>
+	<div class="flex flex-wrap items-center justify-center gap-2 mt-5 px-4 text-sm">
+		<button class="chip" data-ask="Design a database schema for a library">database schema</button>
+		<button class="chip" data-ask="Suggest a meal recipe for tonight">dinner idea</button>
+		<button class="chip" data-ask="Write a poem about the sea">poem</button>
+		<button class="chip" data-ask="Explain a programming concept: recursion">recursion</button>
+		<select id="persona" class="rounded-full border border-[#ccc] bg-transparent px-3 py-1" aria-label="Personality">
+			<option value="friendly">Friendly</option><option value="pirate">Pirate</option><option value="formal">Formal</option><option value="shouty">SHOUTY</option>
+		</select>
+		<button id="clearChat" class="chip">Clear</button>
+	</div>
+	<div id="chat" class="grid grid-cols-1 gap-4 mt-8 px-4"></div>
 </div>
+
+<footer class="mt-28 border-t border-[#dcdcdc] font-söhne text-sm">
+	<div class="max-w-screen-lg mx-auto px-6 py-14 grid grid-cols-2 md:grid-cols-4 gap-8">
+		<div><p class="pb-3">Research</p><ul class="space-y-2 text-[#777978]"><li>Overview</li><li>Index</li><li>Latest advancements</li></ul></div>
+		<div><p class="pb-3">Products</p><ul class="space-y-2 text-[#777978]"><li>ZortGPT</li><li>Desktop</li><li>Pricing</li></ul></div>
+		<div><p class="pb-3">Safety</p><ul class="space-y-2 text-[#777978]"><li>Approach</li><li>Security</li><li>Privacy</li></ul></div>
+		<div><p class="pb-3">Company</p><ul class="space-y-2 text-[#777978]"><li>About</li><li>Careers</li><li>Contact</li></ul></div>
+	</div>
+	<p class="text-center text-[#a4a4a5] pb-10 px-4">A fan clone for practice. Not affiliated with OpenAI. Psst: try &uarr;&uarr;&darr;&darr;&larr;&rarr;&larr;&rarr;B A</p>
+</footer>
 
 <script src="anime.min.js"></script>
 <script src="script.js"></script>
+<script src="extras.js"></script>
+<script src="extras2.js"></script>
 </body>
 </html>
 
